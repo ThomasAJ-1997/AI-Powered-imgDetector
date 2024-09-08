@@ -75,6 +75,61 @@ button:hover {
   gap: 2rem;
 }
 
+.AI-colors-container h3 {
+  display: block;
+  font-size: 2rem;
+}
+
+.AI-colors-container h3:not(:first-child) {
+  margin-top: 2rem;
+}
+
+.AI-colors-container .results {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  font-size: 1.5rem;
+}
+
+.AI-colors-container .results .result-item {
+  /* display: flex; */
+  align-items: center;
+  justify-content: space-between;
+  width: 49%;
+  row-gap: 1rem;
+  background-color: #262626;
+  padding: 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+.progress-loading {
+  width: 60%;
+  background-color: #fff;
+  height: 1.4rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+  margin-left: 1.6rem;
+}
+
+/* .progress {
+  background-color: #d5224e;
+  height: 100%;
+  width: 0;
+} */
+
+/* .progress-loading span {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: #000;
+} */
 .AI-tags-container {
   margin-top: 2rem;
   background-color: #18181b;
@@ -84,6 +139,20 @@ button:hover {
 
 .AI-tags-container h3 {
   margin-bottom: 3rem;
+}
+
+.AI-tags-container .results {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+.AI-tags-container .results .result-item {
+  display: flex;
+  background-color: #262626;
+  padding: 0.6rem 2rem;
+  border-radius: 1rem;
+  font-size: 2.5rem;
 }
 
 .modal {
@@ -107,6 +176,14 @@ button:hover {
   border-radius: 1rem;
 }
 
+.modal-content .progress-loading {
+  background-color: red;
+  border-radius: 1rem;
+  margin-top: 2rem;
+  width: 100%;
+  margin-left: 0;
+}
+
 .toast {
   visibility: hidden;
   max-width: 25rem;
@@ -128,4 +205,20 @@ button:hover {
 .toast.show {
   visibility: visible;
   opacity: 1;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1120px) {
+  .AI-wrapper {
+    flex-direction: column;
+  }
+
+  .AI-upload-container,
+  .AI-colors-container {
+    width: 100%;
+  }
+
+  .AI-colors-container .results .result-item {
+    width: 100%;
+  }
 }
