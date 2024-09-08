@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Image Detector</title>
+    <link rel="icon" type="image/x-icon" href="/images.jpeg" />
+  </head>
+  <body>
+    <h1>AI Image Detector</h1>
+    <div class="AI-wrapper">
+      <div class="upload-container">
+        <h3>Upload Image Here</h3>
+        <div class="buttons">
+          <input
+            type="file"
+            id="imageInputID"
+            accept="image/*"
+            style="display: none"
+          />
+          <button
+            class="file-input-button"
+            onclick="document.getElementById('imageInputID').click();"
+          >
+            Choose File
+          </button>
+          <button id="uploadButtonID">Analyse Image</button>
+        </div>
+        <img src="/image-not-found.png" id="imagePreviewID" />
+      </div>
+
+      <div class="AI-colors-container">
+        <p class="error">Nothing to show...</p>
+      </div>
+    </div>
+
+    <div class="AI-tags-container">
+      <h3>Image Data</h3>
+      <p class="error">Nothing to show...</p>
+      <div class="buttons">
+        <button id="seeMoreButtonID" style="display: none">See More</button>
+        <button id="exportButtonID" style="display: none">Export Tags</button>
+      </div>
+    </div>
+
+    <div id="uploadModalID" class="modal">
+      <div class="modal-content">
+        <h3>Uploading Image...</h3>
+        <div class="progress-loading">
+          <div id="uploadProgressID" class="progress"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
